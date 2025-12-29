@@ -1,4 +1,4 @@
-# Md Nahidul Islam - Cybersecurity Portfolio
+# - Cybersecurity Portfolio -
 
 A modern, professional portfolio website for a cybersecurity expert and red team operator. Designed with a sleek red gradient theme and built with vanilla HTML, CSS, and JavaScript.
 
