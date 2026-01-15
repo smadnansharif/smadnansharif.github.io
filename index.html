@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Adnan Sharif &amp; Interactive CV</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio - Adnan Sharif</title>
+    
+    <!-- Tailwind CSS (CDN for development only) -->
+    <script>
+        // Suppress Tailwind CDN warning
+        if (typeof console !== 'undefined' && console.warn) {
+            const originalWarn = console.warn;
+            console.warn = function(...args) {
+                if (args[0] && typeof args[0] === 'string' && args[0].includes('tailwindcss.com')) {
+                    return; // Suppress Tailwind CDN warning
+                }
+                originalWarn.apply(console, args);
+            };
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-main" data-theme="dark" data-lang="en" data-dir="ltr">
+    
+    <!-- Loading Screen -->
+    <div class="loader-screen" id="loader">
+        <div class="loader-content">
+            <div class="loader-code-text">
+                <div class="code-line" data-line="1"> Adnan Sharif </div>
+                <div class="code-line" data-line="2"> CSEH | COE | CEH</div>
+                <div class="code-line" data-line="3"> Initializing...</div>
+            </div>
+            <div class="loader-spinner-wrapper">
+                <div class="loader-spinner"></div>
+            </div>
+            <div class="loader-progress-wrapper">
+                <div class="loader-progress-bar"></div>
+            </div>
+            <div class="loader-percentage" id="loaderPercent">0%</div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header" id="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Dev</span>
+                    <span class="logo-bracket">Sec&gt;</span>
+                </div>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-text" data-text-en="Home" >Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-text" data-text-en="About" >About</span>
+                </a>
+                <a href="#skills" class="nav-link" data-section="skills">
+                    <i class="fas fa-code"></i>
+                    <span class="nav-text" data-text-en="Skills" >Skills</span>
+                </a>
+                <a href="#experience" class="nav-link" data-section="experience">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="nav-text" data-text-en="Experience" >Experience</span>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <i class="fas fa-rocket"></i>
+                    <span class="nav-text" data-text-en="Projects" >Projects</span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span class="nav-text" data-text-en="Contact" >Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-controls">
+
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" title="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+<main class="main-content">
+    <!-- ...existing code... -->
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background">
+                <div class="code-grid-bg"></div>
+                <div class="floating-particles" id="particles"></div>
+            </div>
+            
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-greeting">
+                        <span class="greeting-text" data-text-en="Hello, I'm">Hello, I'm</span>
+                        <span class="greeting-cursor">|</span>
+                    </div>
+                    
+                    <h1 class="hero-name" id="heroName">
+                        
+                        <span class="name-operator">Adnan</span>
+                        <span class="name-value">Sharif</span>
+                    
+                    </h1>
+                    
+                    <div class="hero-title">
+                        <span class="title-prefix">A Cybersecurity Expert,</span>
+                        <span class="title-text" data-text-en="Self thought Developer & Certified Penetration Tester" >Self thought Developer & Certified Penetration Tester</span>
+                    </div>
+                    
+                    <p class="hero-description" data-text-en="Specialized in offensive security, penetration testing, and red team operations. Helping organizations identify and eliminate security vulnerabilities before attackers do.">
+                        Specialized in offensive security, penetration testing, and red team operations. Helping organizations identify and eliminate security vulnerabilities before attackers do.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span data-text-en="Get In Touch" >Get In Touch</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span data-text-en="View Projects" >View Projects</span>
+                            <i class="fas fa-code"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-social">
+                        <a href="#" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="CodePen">
+                            <i class="fab fa-codepen"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-container">
+                        <div class="profile-image-glow"></div>
+                        <div class="profile-image-frame">
+                            <div class="profile-image" id="profileImage">
+                                <img src="image.png" alt="Profile Image" class="profile-img">
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-1">
+                            <i class="fas fa-skull"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">Red Teaming</span>
+                                <span class="badge-libs">Adversary Simulation, Evasion, Exploitation</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fab fa-microsoft"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">Azure</span>
+                                <span class="badge-libs">Ai, Web, DevOps</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="fas fa-shield-halved"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">Penetration Tester</span>
+                                <span class="badge-libs">Web, Network, API, Red Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span class="scroll-text" data-text-en="Scroll Down">Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">~</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="About Me">About Me</span>
+                        <span class="title-bracket">&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text-wrapper">
+                        <div class="about-intro">
+                            <p class="about-text" data-text-en="I'm a Cybersecurity Specialist and WordPress Expert with 3 years of experience. I’ve served as a Penetration Tester, Security Researcher, and InfoSec Analyst. My mission? Protecting your digital assets from hackers.
+
+I specialize in: WordPress Malware Removal and Cleanup, Security Hardening and Firewall Setup, Penetration Testing and Vulnerability Assessment, Information gathering and Site recovery. I'm also specialize in JavaScript technologies, React, Node.js." >
+I'm a Cybersecurity Specialist and WordPress Expert with 3 years of experience. I’ve served as a Penetration Tester, Security Researcher, and InfoSec Analyst. My mission? Protecting your digital assets from hackers.
+                            </p>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="45+">0</div>
+                                <div class="stat-label" data-text-en="Projects" >Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="3">0</div>
+                                <div class="stat-label" data-text-en="Years Experience" >Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="17">0</div>
+                                <div class="stat-label" data-text-en="Clients" > Clients</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image-wrapper">
+                        <div class="about-image-container">
+                            <div class="code-block">
+                                <div class="code-line">
+                                    <span class="code-keyword">Pentester</span>
+                                    <span class="code-variable">Developer</span>
+                                    <span class="code-operator">=</span>
+                                    <span class="code-brace">{</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">name</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-string">'Adnan Sharif'</span>
+                                    <span class="code-comma">,</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">skills</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-bracket">[</span>
+                                    <span class="code-string">'React'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'Node.js'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'TypeScript'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'WordPress'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'Python'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'bash'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'shell'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'Docker'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'Linux'</span>
+                                    <span class="code-bracket">]</span>
+                                    <span class="code-comma">,</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">passion</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-string">'Coding'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'Pentesting'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'Offensive-Security'</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="code-brace">}</span>
+                                    <span class="code-semicolon">;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">~</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Skills">Skills</span>
+                        <span class="title-bracket">&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="Script Writing" >Script Writing</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Python" data-percent="65">
+                                <div class="skill-header">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="shell" data-percent="26">
+                                <div class="skill-header">
+                                    <span class="skill-name">shell</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Bash" data-percent="67">
+                                <div class="skill-header">
+                                    <span class="skill-name">Bash</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="skill-item" data-skill="PowerShell" data-percent="45">
+                                <div class="skill-header">
+                                    <span class="skill-name">PowerShell</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                               
+                            </div>
+                            <div class="skill-item" data-skill="Go" data-percent="45">
+                                <div class="skill-header">
+                                    <span class="skill-name">Go</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="JavaScript" data-percent="88">
+                                <div class="skill-header">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="SQL" data-percent="88">
+                                <div class="skill-header">
+                                    <span class="skill-name">SQL</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Php" data-percent="88">
+                                <div class="skill-header">
+                                    <span class="skill-name">Php</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="Operating System" >Operating System</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Windows" data-percent="92">
+                                <div class="skill-header">
+                                    <span class="skill-name">Windows</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Kali Linux" data-percent="90">
+                                <div class="skill-header">
+                                    <span class="skill-name">Kali Linux</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Ubuntu" data-percent="95">
+                                <div class="skill-header">
+                                    <span class="skill-name">Ubuntu</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Parrot Os" data-percent="80">
+                                <div class="skill-header">
+                                    <span class="skill-name">Parrot Os</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Fedora" data-percent="67">
+                                <div class="skill-header">
+                                    <span class="skill-name">Fedora</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Linux Mint" data-percent="74">
+                                <div class="skill-header">
+                                    <span class="skill-name">Linux Mint</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Debian" data-percent="80">
+                                <div class="skill-header">
+                                    <span class="skill-name">Debian</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="Tools & Others" >Tools & Others</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Git" data-percent="97">
+                                <div class="skill-header">
+                                    <span class="skill-name">Git</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Docker" data-percent="75">
+                                <div class="skill-header">
+                                    <span class="skill-name">Docker</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="Burpsuite" data-percent="95">
+                                <div class="skill-header">
+                                    <span class="skill-name">Burpsuite</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Nmap" data-percent="90">
+                                <div class="skill-header">
+                                    <span class="skill-name">Nmap</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="Wireshark" data-percent="80">
+                                <div class="skill-header">
+                                    <span class="skill-name">Wireshark</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Nuclei" data-percent="87">
+                                <div class="skill-header">
+                                    <span class="skill-name">Nuclei</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="Sqlmap" data-percent="85">
+                                <div class="skill-header">
+                                    <span class="skill-name">Sqlmap</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                           
+                            <div class="skill-item" data-skill="Social-Engineer Toolkit" data-percent="84">
+                                <div class="skill-header">
+                                    <span class="skill-name">Social-Engineer Toolkit</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">~</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Experience">Experience</span>
+                        <span class="title-bracket">&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-year">2025 - Present</div>
+                                <div class="timeline-badge">Current</div>
+                            </div>
+                            <h3 class="timeline-title" data-text-en="Penetration Tester & Bug Bounty Hunter" >Penetration Tester & Bug Bounty Hunter</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                at Hackerone, Bugcrowd and Fiverr.
+                            </div>
+                            <p class="timeline-description" data-text-en="Working as a freelance penetration tester specializing in web application security, network security, and vulnerability assessments. Conducting security audits and providing detailed reports to clients." >
+                                Working as a freelance penetration tester specializing in web application security, network security, and vulnerability assessments. Conducting security audits and providing detailed reports to clients.
+                            </p>
+                            <div class="timeline-achievements">
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Led team of 4 Pentesters" >Led team of 4 Pentesters</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Improved performance by 40%" >Improved performance by 40%</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Able to research and analyze vulnerabilities of 35+ and Mitigate advance CVE's" >Able to research and analyze vulnerabilities of 35+ and Mitigate advance CVE's</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">SOC</span>
+                                <span class="tag">Offensive Security</span>
+                                <span class="tag">Recon</span>
+                                <span class="tag">Automation</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">AWS</span>
+                                <span class="tag">CVE Analysis</span>
+                                <span class="tag">Bug Bounty</span>
+                                <span class="tag">Penetration Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-year">2020 - 2022</div>
+                            </div>
+                            <h3 class="timeline-title" data-text-en="Junior Security Analyst" >Junior Security Analyst</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                Open source Community
+                            </div>
+                            <p class="timeline-description" data-text-en="Developed interactive user interfaces using React and Vue.js. Worked on improving user experience and performance optimization. Collaborated with designers to implement pixel-perfect designs.">
+                                Developed interactive user interfaces using React and Vue.js. Worked on improving user experience and performance optimization. Collaborated with designers to implement pixel-perfect designs.
+                            </p>
+                            <div class="timeline-achievements">
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Learned most of the security concepts" >Learned most of the security concepts</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Contributed to 10+ open source projects" >Contributed to 10+ open source projects</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">SQLi</span>
+                                <span class="tag">XSS</span>
+                                <span class="tag">CSRF</span>
+                                <span class="tag">SSRF</span>
+                                <span class="tag">WebShell</span>
+                                <span class="tag">Burpsuite</span>
+                                <span class="tag">Malware</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-year">2018 - 2020</div>
+                            </div>
+                            <h3 class="timeline-title" data-text-en="Junior Developer">Junior Developer</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                Free Code Camp Community
+                            </div>
+                            <p class="timeline-description" data-text-en="Developed websites using HTML, CSS, and JavaScript. Learned best practices in web development. Worked on various client projects and gained experience in modern web technologies.">
+                                Developed websites using HTML, CSS, and JavaScript. Learned best practices in web development. Worked on various client projects and gained experience in modern web technologies.
+                            </p>
+                            <div class="timeline-achievements">
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Completed 30+ projects">Completed 30+ projects</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Learned modern frameworks">Learned modern frameworks</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">jQuery</span>
+                                <span class="tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">~</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Projects" >Projects</span>
+                        <span class="title-bracket">&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-text-en="OSINT">OSINT</h3>
+                            <p class="project-description" data-text-en="A complete Recon, Data Mining, Profiling with proper integration and advanced information gathering.">
+                                A complete Recon, Data Mining, Profiling with proper integration and advanced information gathering.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Recon</span>
+                                <span class="tag">Open source</span>
+                                <span class="tag">Leaked database</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-text-en="VAPT">VAPT</h3>
+                            <p class="project-description" data-text-en="Checking systems for security flaws and safely testing how they can be attacked.">
+                                Checking systems for security flaws and safely testing how they can be attacked.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Vulnerability Scan</span>
+                                <span class="tag">CVE Analysis</span>
+                                <span class="tag">Exploit Writing</span>
+                                <span class="tag">Exploitation</span>
+                                <span class="tag">Reporting</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-text-en="WordPress Malware Removal">WordPress Malware Removal</h3>
+                            <p class="project-description" data-text-en="Detecting and removing malware from compromised WordPress sites.">
+                                Detecting and removing malware from compromised WordPress sites.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Cleanup</span>
+                                <span class="tag">Hardening</span>
+                                <span class="tag">Recovery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">~</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Contact">Contact</span>
+                        <span class="title-bracket">&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-label" data-text-en="Email">Email</h4>
+                                <a href="sm.adnansharif@gmail.com" class="contact-value">sm.adnansharif@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-label" data-text-en="Phone">Phone</h4>
+                                <a href="tel:+8801757507072" class="contact-value">+8801757507072</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-label" data-text-en="Location">Location</h4>
+                                <span class="contact-value" data-text-en="Dhaka, Bangladesh">Dhaka, Bangladesh</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Name" data-placeholder-en="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Email" data-placeholder-en="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Subject" data-placeholder-en="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-input form-textarea" rows="5" placeholder="Message" data-placeholder-en="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span data-text-en="Send Message">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-text-wrapper">
+                    <p class="footer-text">
+                        <span class="footer-copyright">© 2026 All rights reserved</span>
+                        <span class="footer-divider">•</span>
+                        <span class="footer-built">Break and then Fix again.</span>
+                    </p>
+                    <p class="footer-author">
+                        <span class="footer-by-text" data-text-en="by">by</span>
+                        <a href="https://www.facebook.com/smadnansharif" target="_blank" rel="noopener noreferrer" class="footer-author-link">
+                            <i class="fas fa-code"></i>
+                            <span>smadnansharif</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/md-nahidul-islam-72263a384/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/smadnansharif" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://facebook.com/smadnansharif" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/smadnansharif" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Motion One loaded dynamically -->
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
