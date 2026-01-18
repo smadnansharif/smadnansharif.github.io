@@ -216,6 +216,7 @@ function initScrollEffects() {
     sections.forEach(section => observer.observe(section));
 }
 
+// Initialize form event handlers
 function initFormHandlers() {
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
@@ -223,17 +224,32 @@ function initFormHandlers() {
     }
 }
 
+// Handle form submission
 function handleFormSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); // Prevent page reload
+
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    console.log('Form submitted:', data);
-    
-    const message = 'Message sent successfully!';
-    
-    alert(message);
+
+    // Create email body
+    const body =
+        `Name: ${data.name}\n` +
+        `Email: ${data.email}\n\n` +
+        `Message:\n${data.message}`;
+
+    // Gmail compose URL
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=nahidhasanph79@gmail.com&subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open Gmail compose in a new tab
+    window.open(url, "_blank");
+
+    // Optional: reset the form
     e.target.reset();
 }
+
+// Run when DOM is ready
+document.addEventListener("DOMContentLoaded", initFormHandlers);
+
 
 function initMobileMenu() {
     const menuToggle = document.getElementById('menuToggle');
